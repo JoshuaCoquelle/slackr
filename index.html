@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Slackr Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Slackr</h1>
-    <hr>
+    <div id="page-wrapper">
+        <div id="slackr-logo"></div>
+        <input id="search-input" type="text" placeholder="Slackr Search">
+        <button id="slackr-button">GET RESULTS</button>
+    </div>
+
+    <!-- Modal + Overlay Content -->
+    <div id="overlay"></div>
+    <div id="modal"><p id="close-modal">CLOSE X</p></div>
+
+    <script src="slackr.js"></script>
 </body>
 </html>

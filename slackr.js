@@ -94,14 +94,12 @@ var SlackrModule = (function(win, doc, undefined) {
     }
 
     // Run XHR Function and Launch Modal
-    // ---------------------------------
     function searchImages() {
         toggleModal();
         consumeAPI(input.value);
     }
 
     // Toggle Modal Visibility
-    // -----------------------
     function toggleModal() {
         modal.classList.toggle('active');
         overlay.classList.toggle('active');

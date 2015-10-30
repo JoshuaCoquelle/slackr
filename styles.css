@@ -58,10 +58,16 @@ body { box-sizing: border-box; }
 }
 
 .nav-arrow {
+    border-radius: 50%;
     display: inline-block;
-    font-size: 70px;
+    font-size: 60px;
     position: relative;
     cursor: pointer;
+    background: #71CADA;
+    text-align: center;
+    padding: 0px 20px;
+    bottom: 10px;
+    color: #FFF;
 }
 
 #left-arrow  { right: 50px; }
@@ -99,10 +105,19 @@ body { box-sizing: border-box; }
 }
 
 #image-container {
-    border: 1px solid #DDD;
-    width: 60%;
-    height: 70%;
-    margin: 20px auto;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#image-container img {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
 }
 
 #close-modal {
@@ -111,7 +126,7 @@ body { box-sizing: border-box; }
     top: -60px;
     font-size: 40px;
     font-family: sans-serif;
-    background: purple;
+    background: #71CADA;
     color: #FFF;
     border-radius: 50%;
     width: 45px;

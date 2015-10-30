@@ -6,15 +6,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Page Content -->
     <div id="page-wrapper">
         <div id="slackr-logo"></div>
         <input id="search-input" type="text" placeholder="Slackr Search">
-        <button id="slackr-button">GET RESULTS</button>
+        <button id="slackr-button" disabled>GET RESULTS</button>
     </div>
 
+    <!-- Navigation Footer -->
+
     <!-- Modal + Overlay Content -->
-    <div id="overlay"></div>
-    <div id="modal"><p id="close-modal">CLOSE X</p></div>
+    <div id="overlay" class="active"></div>
+
+    <div id="modal" class="active">
+        <div id="image-container"></div>
+
+        <p id="close-modal">X</p>
+
+        <div id="navigation-footer">
+            <div id="left-arrow" class="nav-arrow"><</div>
+            <div id="right-arrow" class="nav-arrow">></div>
+        </div>
+    </div>
 
     <script src="slackr.js"></script>
 </body>

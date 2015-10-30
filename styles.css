@@ -1,3 +1,5 @@
+body { box-sizing: border-box; }
+
 #page-wrapper {
     display: block;
     height: 100%;
@@ -31,12 +33,46 @@
     font-size: 20px;
     color: #FFF;
     cursor: pointer;
+    transition: .8s;
 }
 
+#slackr-button:disabled,
+#slackr-button:disabled:hover {
+    background: #EEE;
+    border-radius: 0;
+}
+
+#slackr-button:hover {
+    background: #71CADA;
+    border-radius: 50px;
+}
+
+/*      Navigation Footer
+------------------------------ */
+#navigation-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav-arrow {
+    display: inline-block;
+    font-size: 70px;
+    position: relative;
+    cursor: pointer;
+}
+
+#left-arrow  { right: 50px; }
+#right-arrow { left: 50px; }
+
+/*       MODAL CONTENT
+------------------------------ */
 #overlay {
     position: fixed;
     background: #000;
-    opacity: .9;
+    opacity: .8;
     width: 100%;
     height: 100%;
     z-index: 9998;
@@ -50,9 +86,9 @@
 
 #modal {
     position: fixed;
-    background: red;
-    width: 500px;
-    height: 600px;
+    background: #FFF;
+    width: 80%;
+    height: 80%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -60,6 +96,29 @@
     margin: auto;
     z-index: 9999;
     display: none;
+}
+
+#image-container {
+    border: 1px solid #DDD;
+    width: 60%;
+    height: 70%;
+    margin: 20px auto;
+}
+
+#close-modal {
+    position: absolute;
+    right: -25px;
+    top: -60px;
+    font-size: 40px;
+    font-family: sans-serif;
+    background: purple;
+    color: #FFF;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
 }
 
 #modal.active   { display: block; }

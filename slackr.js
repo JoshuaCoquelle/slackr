@@ -115,4 +115,7 @@ var SlackrModule = (function(win, doc, undefined) {
         modal.classList.toggle('active');
         overlay.classList.toggle('active');
     }
+
+    // Added to Smooth Transitions on Load
+    doc.getElementsByTagName('body')[0].classList.add('loaded');
 })(window, document);

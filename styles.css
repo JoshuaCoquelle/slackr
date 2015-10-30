@@ -34,6 +34,8 @@
     padding-left: 20px;
 }
 
+.loaded #slackr-button { transition: .4s; }
+
 #slackr-button {
     width: 400px;
     height: 70px;
@@ -45,7 +47,6 @@
     font-size: 20px;
     color: #FFF;
     cursor: pointer;
-    transition: .4s;
 }
 
 #slackr-button:disabled,

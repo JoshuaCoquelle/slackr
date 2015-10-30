@@ -34,14 +34,9 @@ var SlackrModule = (function(win, doc, undefined) {
         xhr.open("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyB7SYES6iuhdHSdlf1k3qAJ0iLbCrFODNM&cx=003600216563210902934:i7-f2aptjku&searchType=image&num=10&q=" + query + "", true);
         xhr.send();
 
+        // Parse JSON on Success and Create Gallery
         xhr.onreadystatechange = function() {
             if (xhr.readyState != 4 || xhr.status != 200) return;
-
-            // Reset Variables/HTML
-            resultArr         = [];
-            imgWrap.innerHTML = '';
-            input.value       = '';
-            imgIndex          = 0;
 
             var response = JSON.parse(xhr.responseText).items;
 
@@ -100,6 +95,12 @@ var SlackrModule = (function(win, doc, undefined) {
     function searchImages() {
         toggleModal();
         consumeAPI(input.value);
+
+        // Reset Variables/HTML
+        resultArr         = [];
+        imgWrap.innerHTML = '';
+        input.value       = '';
+        imgIndex          = 0;
     }
 
     // Toggle Modal Visibility

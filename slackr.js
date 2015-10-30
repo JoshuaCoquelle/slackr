@@ -77,9 +77,6 @@ var SlackrModule = (function(win, doc, undefined) {
             imgIndex++;
             imgTitle.textContent = resultArr[imgIndex].title;
         }
-
-        console.log(imgIndex);
-        console.log(resultArr[imgIndex]);
     }
 
     // Display Previous Image in Gallery
@@ -89,9 +86,6 @@ var SlackrModule = (function(win, doc, undefined) {
             imgTitle.textContent = resultArr[imgIndex].title;
             imgWrap.children[imgIndex].style.display = 'block';
         }
-
-        console.log(imgIndex);
-        console.log(resultArr[imgIndex]);
     }
 
     // ------------------------------------

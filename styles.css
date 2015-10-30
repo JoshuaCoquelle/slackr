@@ -124,6 +124,19 @@
     overflow: hidden;
 }
 
+#image-title {
+    position: absolute;
+    background: black;
+    z-index: 99998;
+    width: 100%;
+    top: -19px;
+    color: #FFF;
+    height: 40px;
+    opacity: .9;
+    line-height: 2;
+    text-align: center;
+}
+
 #image-container img {
     display: block;
     height: 100%;
@@ -135,14 +148,15 @@
 #close-modal {
     position: absolute;
     right: 0;
-    top: -30px;
+    top: -43px;
     font-size: 40px;
     font-family: sans-serif;
-    color: #D6100D;
+    color: #71CADA;
     width: 45px;
     height: 45px;
     text-align: center;
     cursor: pointer;
+    z-index: 99999;
 }
 
 #modal.active   { display: block; }

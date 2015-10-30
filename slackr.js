@@ -5,6 +5,7 @@ var SlackrModule = (function(win, doc, undefined) {
     var modal      = doc.getElementById('modal');
     var overlay    = doc.getElementById('overlay');
     var imgWrap    = doc.getElementById('image-container');
+    var imgTitle   = doc.getElementById('image-title');
     var closeBtn   = doc.getElementById('close-modal');
     var input      = doc.getElementById('search-input');
     var searchBtn  = doc.getElementById('slackr-button');
@@ -59,6 +60,10 @@ var SlackrModule = (function(win, doc, undefined) {
     // Create Image Gallery from API Results
     function buildGallery() {
         for (var i = 0; i < resultArr.length; i++) {
+            // Image Title
+            imgTitle.textContent = resultArr[i].title;
+
+            // Image Body
             var img = doc.createElement('img');
             img.src = resultArr[i].link;
             imgWrap.appendChild(img);
@@ -70,15 +75,23 @@ var SlackrModule = (function(win, doc, undefined) {
         if (imgIndex < 9) {
             imgWrap.children[imgIndex].style.display = 'none';
             imgIndex++;
+            imgTitle.textContent = resultArr[imgIndex].title;
         }
+
+        console.log(imgIndex);
+        console.log(resultArr[imgIndex]);
     }
 
     // Display Previous Image in Gallery
     function previousImage() {
         if (imgIndex > 0) {
             imgIndex--;
+            imgTitle.textContent = resultArr[imgIndex].title;
             imgWrap.children[imgIndex].style.display = 'block';
         }
+
+        console.log(imgIndex);
+        console.log(resultArr[imgIndex]);
     }
 
     // ------------------------------------

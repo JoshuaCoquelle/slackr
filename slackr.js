@@ -37,9 +37,12 @@ var SlackrModule = (function(win, doc, undefined) {
         xhr.onreadystatechange = function() {
             if (xhr.readyState != 4 || xhr.status != 200) return;
 
-            resultArr    = [];
-            input.value  = '';
-            input.focus;
+            // Reset Variables/HTML
+            resultArr         = [];
+            imgWrap.innerHTML = '';
+            input.value       = '';
+            imgIndex          = 0;
+
             var response = JSON.parse(xhr.responseText).items;
 
             for (var i = 0; i < response.length; i++) {
